@@ -1,0 +1,35 @@
+body{
+  background-color: whitesmoke;align-self: 
+}
+
+
+ table,
+    th,
+    td,
+tr{
+        border: 2px solid red;
+         color : blue;
+    }
+ u {
+   color:black
+ }
+b{
+  color:yellowgreen
+}
+
+button{
+  color:red;
+  background-color: yellowgreen;
+  
+}
+ h1{
+  text-align: center;
+   color: blue;
+   text-decoration:underline;
+}
+p{
+  text-align: center;
+   color: green;
+   font-size: 50px;
+  border: 1px solid black;
+}
