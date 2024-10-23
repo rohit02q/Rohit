@@ -998,7 +998,7 @@ document.getElementById('p4').innerText = "";
         // Hide the text after 5 seconds
         setTimeout(() => {
             document.getElementById('p4').innerText = "";
-        }, 5000);
+        }, 10000);
         
     } else {
         document.getElementById('p4').innerText = "";
@@ -1030,14 +1030,16 @@ document.getElementById('p3').innerText = "";
         alert("Unlock at Score 35");
     } else {
         // p4 ID का टेक्स्ट को लिंक बनाना
-        const p4 = document.getElementById('p4');
+         let p4 = document.getElementById('p4');
         p4.innerText = "Warning! your score will be reset. "; // Link text
         p4.style.cursor = "pointer"; // Change cursor to pointer
         p4.onclick = function() {
-          
+          war = confirm("Warning! You Score Will Be Reset.");
        // जब p4 पर क्लिक किया जाए, तो दूसरे HTML पेज पर जाएं
+          if(war){
             window.location.href = '2way.html'; // यहां 'secondPage.html' को अपने लक्ष्य पेज के नाम से बदलें
-      
+          }
+          else{}
         };
     }
 }
