@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <style>
+    body {
+      background: #faf8ef;
+      margin: 0;
+      padding: 0;
+    }
+    #h1 {
+      text-align: center;
+      color: red;
+    }
+    #cl,#submitBtn {
+      border: none;
+      border-radius: 25px;
+      margin-left: 25%;
+      width: 200px; /* Adjusted width */
+      height: 70px; /* Adjusted height */
+      background-color: rgb(22, 126, 134);
+      color: white;
+      font-size: 20px; 
+      cursor: pointer; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      text-align: center; /* Center text in the button */
+    }
+    #p1 {
+      color: red;     
+      text-align: center; /* Center aligned */
+      font-size: 40px;       
+    }
+    #p2 {
+      color: rgba(0, 0, 0, 1);    
+      text-align: center; /* Center aligned */
+    }
+    #answerInput {
+      display: none; /* Initially hidden */
+      margin: 20px auto; /* Center the input field */
+      width: 150px; /* Smaller width */
+      height: 40px; /* Adjusted height */
+      font-size: 16px; /* Slightly smaller font size */
+      border: 2px solid green;
+      border-radius: 10px;
+      padding: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      text-align: center; /* Center text in the input */
+    }
+    #submitBtn {
+      display: none; /* Initially hidden */
+          }
+  </style>
+  
+  <title>Just Click</title>
+</head>
+<body>
+  <h3 id="h1"></h3>
+  <br>
+   <button id="submitBtn" onclick="submitAnswer();">Submit</button> <!-- Submit button -->
+  <button id="cl" onclick="handleClick();">Press</button>
+  <input type="text" id="answerInput" placeholder="Type ans.." />
+   <h1 id="p1"></h1>
+  <p id="p2"></p>
+  
+  <script>
+    var x = 10000; 
+    document.getElementById('h1').innerText = `Click button ${x} times to get password`;
+  
+    function handleClick() {
+      if (x > 1) {
+        x--;
+        document.getElementById('h1').innerText = `Click button ${x} times to get password`;
+      } else {
+            document.getElementById("cl").style.display = "none";
+
+        document.getElementById('h1').innerText = `Solve for Password`;
+        document.getElementById('p2').innerText = "Q. AP: 7, 13, 19,... 205 में कितने पद हैं?";    
+        document.getElementById('cl').innerText = "Submit"; // Change button text
+        document.getElementById('answerInput').style.display = "block"; // Show input field
+        document.getElementById('submitBtn').style.display = "block"; // Show submit button
+              }
+    }
+  
+    // Add an event listener to submit the answer when the input field is used
+    document.getElementById('answerInput').addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') { // Check if Enter key is pressed
+        submitAnswer();
+      }
+    });
+
+    function submitAnswer() {
+      let answer = document.getElementById('answerInput').value; // Get the answer from input
+      if (answer == 34) {
+        document.getElementById('h1').innerText = ``;
+ 
+        document.getElementById('p1').innerText = `🎉🎉 Congratulation!`;
+        document.getElementById('p2').innerText = `Password is Rohit25`;
+        document.getElementById('cl').style.display = "none"; // Hide button after answering
+        document.getElementById('answerInput').style.display = "none"; // Hide input field after answering
+        document.getElementById('submitBtn').style.display = "none"; // Hide submit button after answering
+      } else {
+        document.getElementById('h1').innerText = `Wrong Answer 🤔`;
+      }
+      document.getElementById('answerInput').value = ""; // Clear the input field
+    }
+  </script>
+</body>
+</html>
+
+
+
