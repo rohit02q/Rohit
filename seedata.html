@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    
+      <!-- Password Dialog -->
+    <div id="passwordDialog">
+        <h1>Only admin can see all data</h1>
+        <p id="rps">Required password</p>        
+  
+             <input type="password" id="ps" placeholder="Enter Password">
+         <p id="rps2" style="color:red"></p>        
+  
+       <button id="login">Submit</button>
+    </div>
+    <!--main area-->
+    <div id="main">
+        <h1>Student Data Viewer</h1>
+
+        <!-- Search Box -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search by name, mobile, or subject...">
+        </div>
+
+        <!-- Table -->
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Strong Subject</th>
+                    <th>Weak Subject</th>
+                    <th>Suggestions</th>
+                    <th>Submitted Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be populated here dynamically -->
+            </tbody>
+        </table>
+
+        <!-- Strong and Weak Subject Percentages -->
+        <div class="subject-counts">
+            <p id="strongSubjectsCount"></p>
+            <p id="weakSubjectsCount"></p>
+        </div>
+    </div>
+    <!-- Link the JS file as a module -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
