@@ -182,7 +182,7 @@ tr:hover {
 }
 
 /* Button Styling */
-#login {
+#login ,#rdata {
     margin-top: 10px;
     width: 90%;
     padding: 12px;
@@ -195,11 +195,11 @@ tr:hover {
     transition: background-color 0.3s ease;
 }
 
-#login:hover {
+#login,#rdata:hover {
     background-color: #008C41; /* Darker green on hover */
 }
 
-#login:active {
+#login,#rdata:active {
     background-color: #006f31; /* Even darker green on click */
 }
 
@@ -209,7 +209,7 @@ tr:hover {
         padding: 15px;
     }
 
-    #passwordInput, #login {
+    #passwordInput, #login ,#rdata{
         font-size: 14px;
     }
 }
