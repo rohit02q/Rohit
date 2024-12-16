@@ -114,6 +114,7 @@ fetchData();
 }
 // Add Event Listener to Button
 document.getElementById("login").addEventListener("click",Login);
+document.getElementById("rdata").addEventListener("click",fetchData);
 
 // Search Functionality
 const searchInput = document.getElementById("searchInput");
